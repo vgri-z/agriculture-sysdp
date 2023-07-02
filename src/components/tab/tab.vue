@@ -24,7 +24,7 @@ export default {
       type: Array,
       default: () => [
         { name: "首页大屏", icon: "el-icon-picture-outline", url: "/index" },
-        { name: "首页大屏", icon: "el-icon-picture-outline", url: "/data-summary" },
+        { name: "数据概要", icon: "el-icon-picture-outline", url: "/data-summary" },
         { name: "四情监测", icon: "el-icon-s-management", url: "/weather-station" },
         { name: "视频监控", icon: "el-icon-menu", url: "/real-time-monitor" },
         { name: "智慧农机", icon: "el-icon-s-cooperation", url: "/car-use" },
@@ -48,6 +48,7 @@ export default {
       //currentIndex: 1,
     };
   },
+  emits: ["itemClick"],
   computed: {
     individual: {
       get() {
@@ -74,9 +75,10 @@ export default {
           });
         }, 3000);
       } else {
+        console.log(item, index);
         // this.currentIndex = index;
         this.$router.push(item.url);
-        // this.$emit(itemClick, { item, index });
+        // this.$emit("itemClick", { item, index });
       }
     },
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="car-use">
     <div class="header">
-      <tab :currentIndex="3"></tab>
+      <tab :currentIndex="4"></tab>
     </div>
     <el-container>
       <el-main>

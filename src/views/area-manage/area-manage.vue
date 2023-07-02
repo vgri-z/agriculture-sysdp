@@ -1,7 +1,7 @@
 <template>
   <div class="area-manage" :style="{ background: individual.bgColor || `url(${individual.bgUrl}) no-repeat` }">
     <!-- <TopHeader :tabs="tabs" /> -->
-    <new-header :currentIndex="4"></new-header>
+    <new-header :currentIndex="5"></new-header>
     <div class="content">
       <div class="left">
         <div class="main">

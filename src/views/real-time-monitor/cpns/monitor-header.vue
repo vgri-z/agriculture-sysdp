@@ -1,5 +1,5 @@
 <template>
-  <new-header :currentIndex="2"></new-header>
+  <new-header :currentIndex="3"></new-header>
   <!-- <div class="monitor-header">
     <div class="name">视频监控数据中心</div>
     <div class="tab left-tab">
