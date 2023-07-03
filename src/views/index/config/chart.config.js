@@ -219,7 +219,7 @@ export const mbrOptions = {
         borderWidth: 1,
       },
       areaStyle: {
-        color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+        color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
           {
             offset: 0,
             color: "#163339",
@@ -292,25 +292,23 @@ export const rbOptions1 = {
         color: "#06336a",
       },
       itemStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(
-            0,
-            1,
-            0,
-            0,
-            [
-              {
-                offset: 0,
-                color: "#27ffff", // 0% 处的颜色
-              },
-              {
-                offset: 1,
-                color: "#0199ff", // 100% 处的颜色
-              },
-            ],
-            false
-          ),
-        },
+        color: new echarts.graphic.LinearGradient(
+          0,
+          1,
+          0,
+          0,
+          [
+            {
+              offset: 0,
+              color: "#27ffff", // 0% 处的颜色
+            },
+            {
+              offset: 1,
+              color: "#0199ff", // 100% 处的颜色
+            },
+          ],
+          false
+        ),
       },
     },
   ],
