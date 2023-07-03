@@ -25,6 +25,11 @@
             </div>
           </div>
         </div>
+
+        <div class="top-tab">
+          <div class="top-tab-item active">气象</div>
+          <div class="top-tab-item">土壤</div>
+        </div>
       </div>
     </card>
   </div>
@@ -67,6 +72,7 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
   }
 
   .tabs {
@@ -138,6 +144,25 @@ export default {
         color: #2edeff;
         font-size: 12px;
         font-weight: bold;
+      }
+    }
+  }
+
+  .top-tab {
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    display: flex;
+
+    .top-tab-item {
+      padding-bottom: 5px;
+
+      margin-right: 10px;
+      cursor: pointer;
+
+      &.active {
+        border-bottom: 2px solid #2fe5ff;
       }
     }
   }

@@ -2,6 +2,7 @@
   <div class="right-top">
     <card :title="'实时监控'">
       <div class="monitor">
+        <!-- tab切换 -->
         <div class="tabs">
           <div
             class="tab-item"
@@ -13,9 +14,11 @@
             {{ item.name }}
           </div>
         </div>
+        <!-- 视频监控 -->
         <div class="video">
           <div class="img"></div>
         </div>
+        <!-- 操作部分 -->
         <div class="operate">
           <div class="switch">
             <div class="title">监控开关</div>
@@ -42,6 +45,12 @@
             <img src="../../../assets/img/sub.png" alt="" />
           </div>
         </div>
+        <!-- 选择下拉框 -->
+        <div class="select-area">
+          <el-select v-model="option" placeholder="请选择">
+            <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"> </el-option>
+          </el-select>
+        </div>
       </div>
     </card>
   </div>
@@ -55,6 +64,12 @@ export default {
     return {
       tabs: [{ name: "服务中心" }, { name: "乡级服务中心" }, { name: "服务中心2" }],
       currentIndex: 0,
+      options: [
+        { label: "服务中心", value: 1 },
+        { label: "乡级服务中心", value: 2 },
+        { label: "服务中心2", value: 3 },
+      ],
+      option: 1,
       isSwitch: true,
     };
   },
@@ -75,6 +90,7 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
   }
 
   .tabs {
@@ -214,6 +230,21 @@ export default {
           transform: rotate(90deg);
         }
       }
+    }
+  }
+
+  .select-area {
+    position: absolute;
+    right: 12px;
+    top: -32px;
+    /deep/ .el-input__inner {
+      width: 150px;
+      height: 30px;
+    }
+
+    /deep/ .el-select__caret.el-input__icon.el-icon-arrow-up::before {
+      position: relative;
+      top: -6px;
     }
   }
 }

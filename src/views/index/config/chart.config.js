@@ -17,7 +17,6 @@ export const lbOptions1 = {
         color: "#2b2f35",
       },
     },
-
     axisLabel: {
       color: "#fff",
     },
