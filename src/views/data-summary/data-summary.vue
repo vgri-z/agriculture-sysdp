@@ -186,7 +186,7 @@ export default {
       this.myChart4.setOption(this.options4);
     },
     setOptions5() {
-      console.log(this.$refs.chartRef5, "====");
+      // console.log(this.$refs.chartRef5, "====");
       this.myChart5 = echarts.init(this.$refs.chartRef5);
       this.myChart5.setOption(this.options5);
     },

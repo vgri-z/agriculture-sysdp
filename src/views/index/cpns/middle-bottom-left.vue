@@ -1,17 +1,21 @@
 <template>
   <div class="middle-bottom-left">
     <card :title="'设备运行状态'">
-      <dv-scroll-board :config="tableData" style="width: 100%; height: 100%" />
+      <!-- <dv-scroll-board :config="tableData" style="width: 100%; height: 100%" />
       <div class="empty" v-if="!tableData.data.length">
         <img src="../../../assets/img/no-data.png" alt="" />
         <div>暂无数据</div>
-      </div>
+      </div> -->
+
+      <div ref="chartRef" style="width: 100%; height: 100%"></div>
     </card>
   </div>
 </template>
 
 <script>
 import Card from "./card.vue";
+import * as echarts from "echarts";
+import { mblOptions } from "../config/chart.config";
 export default {
   components: { Card },
   data() {
@@ -29,7 +33,18 @@ export default {
         oddRowBGC: "#11244a",
         evenRowBGC: "#091432",
       },
+      myChart: null,
+      options: mblOptions,
     };
+  },
+  mounted() {
+    this.setOptions();
+  },
+  methods: {
+    setOptions() {
+      this.myChart = echarts.init(this.$refs.chartRef);
+      this.myChart.setOption(this.options);
+    },
   },
 };
 </script>

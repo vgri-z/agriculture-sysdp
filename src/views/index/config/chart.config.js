@@ -368,3 +368,99 @@ export const rbOptions2 = {
     },
   ],
 };
+
+export const mblOptions = {
+  color: ["#63c9ec", "#e61e05"],
+  tooltip: {
+    trigger: "axis",
+  },
+
+  grid: {
+    left: "15%",
+    right: "20%",
+    bottom: "10%",
+    top: "20%",
+    containLabel: true,
+  },
+  xAxis: {
+    name: "年份",
+    nameTextStyle: {
+      color: "#fff",
+    },
+    type: "category",
+    boundaryGap: true,
+    data: ["2021", "2022", "2023", "2024", "2025", "2026"],
+    axisLine: {
+      show: true,
+      lineStyle: {
+        color: "#2b2f35",
+      },
+    },
+    axisLabel: {
+      color: "#fff",
+    },
+    axisTick: {
+      lineStyle: {
+        color: "#2b2f35",
+      },
+    },
+  },
+  yAxis: {
+    name: "单位：公斤",
+    nameTextStyle: {
+      color: "#ffffff",
+      fontSize: 12,
+    },
+    type: "value",
+    axisLine: {
+      show: true,
+      lineStyle: {
+        color: "#2b2f35",
+      },
+    },
+    axisLabel: {
+      color: "#fff",
+    },
+    axisTick: {
+      show: true,
+      lineStyle: {
+        color: "#2b2f35",
+      },
+    },
+    splitLine: {
+      show: true,
+      lineStyle: {
+        color: "#152b66",
+      },
+    },
+  },
+  series: [
+    {
+      name: "年回收总量",
+      type: "line",
+      symbol: "circle",
+      symbolSize: 8,
+      lineStyle: {
+        color: "#0bebf7",
+      },
+      itemStyle: {
+        color: "transparent",
+        borderColor: "#0bebf7",
+        borderWidth: 1,
+      },
+      data: [30, 23, 45, 67, 89, 90],
+      areaStyle: {
+        color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+          {
+            offset: 0,
+            color: "#246490",
+          },
+          {
+            offset: 1,
+            color: "#2c3858",
+          },
+        ]),
+      },
+    },
+  ],
+};
